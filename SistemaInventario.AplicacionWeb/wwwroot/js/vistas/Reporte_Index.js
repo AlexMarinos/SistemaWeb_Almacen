@@ -1,9 +1,9 @@
 ﻿let tablaData;
-$(Document).ready(funtion(){
+$(Document).ready(function(){
     $datepicker.setDefaults($.datepicker.regional[es])
 
     $("#txtFechaInicio").datepicker({dateFormat: "dd/mm/yy"})
-    $("#txtFechaFin").datepicker({dateFormat: "dd/mm/yy"})
+    $("#txtFechaFin").datepicker({ dateFormat: "dd/mm/yy" })
 
     tablaData = $('#tbdata').DataTable({
         responsive: true,
