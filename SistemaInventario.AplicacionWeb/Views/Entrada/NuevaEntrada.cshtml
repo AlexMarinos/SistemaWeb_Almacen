@@ -1,0 +1,148 @@
+﻿
+@{
+    ViewData["Title"] = "Nueva Entrada";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Estilos{
+    <!-- ============================================================
+      =ESTILOS PARA ESTA PAGINA
+      ===============================================================-->
+    <link href="~/vendor/select2/select2.min.css" rel="stylesheet">
+
+}
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3 bg-second-primary">
+                        <h6 class="m-0 font-weight-bold text-white">Ingreso</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <label for="cbooriginal">Origen</label>
+                                <select class="form-control form-control-sm" id="cboorigen">
+                                    <option value="0">seleccionar</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="cbopersonal">Personal</label>
+                                <select class="form-control form-control-sm" id="cbopersonal">
+                                    <option value="0">Seleccionar</option>
+                                    <!-- Opciones adicionales de personal -->
+                                </select>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3 bg-second-primary">
+                        <h6 class="m-0 font-weight-bold text-white">Productos</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <select class="form-control form-control-sm" id="cboBuscarProducto">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table table-striped table-sm" id="tbProducto">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Producto</th>
+                                            <th>Cantidad</th>
+                                            <th>Unidad Medida</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-sm-4">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3 bg-second-primary">
+                        <h6 class="m-0 font-weight-bold text-white">Detalle</h6>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputFecha">Fecha</span>
+                            </div>
+                            <input type="date" class="form-control text-right" aria-label="Small" aria-describedby="inputFecha" id="txtFecha">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputpecosa">Numero-Pecosa</span>
+                            </div>
+                            <input type="text" class="form-control text-right" aria-label="Small" aria-describedby="inputGroupSubTotal" id="txtSubTotal">
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputDescripcion">Descripción</span>
+                            </div>
+                            <textarea class="form-control" aria-label="With textarea" aria-describedby="inputDescripcion" id="txtDescripcion"></textarea>
+                        </div>
+
+
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputJustificacion">Justificación</span>
+                            </div>
+                            <textarea class="form-control" aria-label="With textarea" aria-describedby="inputJustificacion" id="txtJustificacion"></textarea>
+                        </div>
+
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="form-group mb-0">
+                            <button class="btn btn-success btn-sm btn-block" id="btnTerminarVentar">Terminar Ingreso</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <!-- ============================================================
+    =SCRIPTS PARA ESTA PAGINA
+    ===============================================================-->
+    <script src="~/vendor/select2/select2.min.js"></script>
+    <script src="~/vendor/select2/es.min.js"></script>
+}
